@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片商城首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/yuding.css" />
+</head>
+<body>
+<div id="header">
+	<include file="Public/title"/>
+</div>
+<div id="nav" >
+	<include file="Public/nav"/>
+</div>
+<div id="content">
+  
+  <div id="left">
+    <div id="subnav">
+     <include file="Public/nav-left"/>
+    </div>
+     <div id="bottom">
+     	<include file="Public/gonggao"/>
+    </div>
+  </div>
+  <div id="right">
+    <volist name="list" id="book">
+    <div id="r1">
+      <div id="rleft">
+        <a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}">
+          <img src="__ROOT__/Uploads/{$book.photo}" style="width:150px;" />
+        </a>
+      </div>
+      <div id="rright">
+        <a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}"><h4>{$book.bookname}</h4></a>
+        <p> {$book.introduction|substr=0,400}</p>
+        <p class="rp">
+          现价：<span class="xianjia">{$book.bookprice}</span>
+          原价：<span class="yuanjia">{$book.bookprice}</span> 
+          折扣：<span class="zheko">{$book.vipprice} </span>
+        </p>
+        <a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}"><img src="__PUBLIC__/Home/images/goumia.png" /></a>
+        <a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}"><img src="__PUBLIC__/Home/images/shoucang.png" /></a>
+      </div>
+    </div>
+   </volist>
+   
+  
+    <div><p>{$page}</p>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <p>互联网信息服务备案编号：冀ICP备06001111号 技术支持：计算机系</p>
+<p>Copyright @2012-2019,All Rights Reserved  京ICP证041189号</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片商城首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/dingdan.css" />
+</head>
+<body>
+<div id="header">
+  <include file="Public/title"/>
+</div>
+<div id="nav" >
+  <include file="Public/nav"/>
+</div>
+<script language="javascript"> 
+        function resizeImage(obj){if(obj.height>50)obj.height=50;if(obj.width>50)obj.width=50; } 
+        </script>
+<div id="content" style="margin:10px 0;"> 
+    <table width="1000" border="1" bordercolor="#006600" bgcolor="#FFFFFF"  cellspacing="0">
+      <tr >
+        <th width="100">名称</th>
+        <th width="50">数量</th>
+        <th width="50">总价</th>
+        <th width="100">地址</th>
+        <th width="50">下单人</th>
+        <th width="50">收货人</th>
+        <th width="50">邮编</th>
+        <th width="100">手机</th>
+        <th width="100">邮件</th>
+        <th width="50">快递</th>
+        <th width="100">时间</th>
+        <th width="50">状态</th>
+        <th width="50">操作</th>
+      </tr>
+      <volist name="list" id="dingdan">
+        <tr>
+          <td style="border-top:1px #F60 solid;">{$dingdan.spc}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.slc}</td>
+          <td style="border-top:1px #F60 solid;">￥{$dingdan.total}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.address}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.xiadanren}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.shouhuoren}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.youbian}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.tel}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.email}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.shff}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.orderdate}</td>
+          <td style="border-top:1px #F60 solid;">{$dingdan.zt}</td>
+          <td style="border-top:1px #F60 solid; border-right:0px">
+          	<a href="__URL__/dingdanDel/id/{$dingdan.orderid}">删除</a>
+          </td>
+        </tr>
+      </volist>
+    </table>
+	<div id="ft">
+    	&nbsp;&nbsp;&nbsp;&nbsp;<a href="__URL__/dingdanalldel">清空订单</a> 
+    </div>
+</div>
+</body>
+</html>

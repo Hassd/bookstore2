@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片商城首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index.css" />
+</head>
+<body>
+<div id="header">
+	<include file="Public/title"/>
+</div>
+<div id="nav" >
+	<include file="Public/nav"/>
+</div>
+<div id="content">
+  <div id="left">
+    <div id="subnav">
+      <include file="Public/nav-left"/>
+    </div>
+    <div id="bottom">
+      <include file="Public/gonggao"/>
+    </div>
+  </div>
+  <div id="con">
+    <div id="banner">
+      <script language="javascript" src="__PUBLIC__/Home/js/pptBox.js"></script>
+      <script>
+     var box =new PPTBox();
+     box.width = 510; //宽度
+     box.height = 314;//高度
+     box.autoplayer = 3;//自动播放间隔时间
+
+     //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+     box.add({"url":"__PUBLIC__/Home/images/js4.png","href":"","title":"悬浮提示标题1"})//url为换图片 href为点击后链接的地址
+     box.add({"url":"__PUBLIC__/Home/images/js2.png","href":"","title":"悬浮提示标题2"})//url为换图片 href为点击后链接的地址
+     box.add({"url":"__PUBLIC__/Home/images/js3.png","href":"","title":"悬浮提示标题3"})//url为换图片 href为点击后链接的地址
+     box.add({"url":"__PUBLIC__/Home/images/js.png","href":"","title":"悬浮提示标题4"})//url为换图片 href为点击后链接的地址
+     box.show();
+    </script>
+    </div>
+    <div id="right">
+      <h3><img src="__PUBLIC__/Home/images/right.gif" /><span>图书畅销榜</span></h3>
+
+      <volist name="list2" id="book2">
+        <p><a href="__APP__/Home/xiangxi/xiangxi/id/{$book2.bookid}"><img src="__PUBLIC__/Home/images/{$i}.gif" />{$book2.bookname}</a></p>
+      </volist>
+
+    </div>
+    <div id="confooter">
+      <h3><span class="hl"><img id="conimg" src="__PUBLIC__/Home/images/right5.gif" />推荐图书</span><span class="hr">更多推荐图书>></span></h3>
+      <ul>
+          <volist name="list" id="book">
+            <li><a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}"> <img src="__ROOT__/Uploads/{$book.photo}"  height="50px" /></a>
+              <h5><span>图书名称：</span><a href="__APP__/Home/xiangxi/xiangxi/id/{$book.bookid}">{$book.bookname}</a></h5>
+              <p>{$book.author}</p>
+              <p>价格<span>{$book.bookprice}</span></p>
+            </li>
+          </volist>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footer"> 
+  <p>互联网信息服务备案编号：冀ICP备06001111号 技术支持：计算机系</p>
+  <p>Copyright @2012-2019,All Rights Reserved  京ICP证041189号</p>
+</div>
+</body>
+</html>

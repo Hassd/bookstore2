@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0px;
+padding:0px;
+}
+body{ margin:0px auto;
+width:1100px;
+}
+a img { border:0px;}

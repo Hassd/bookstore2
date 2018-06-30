@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	background-color:#ffffff;
+	margin:0 auto;
+	width:1000px;
+	font:12px/1.6 "宋体";
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+a img {
+	border:0px;
+}
+#header {
+	width:1000px;
+	margin-top:10px;
+	height:100px;
+}
+#login {
+	background:url(../images/loginbg.gif) repeat-x;
+	width:1000px;
+	height:30px;
+}
+#login ul li {
+	list-style:none;
+	line-height:50px;
+	clear:both;
+}
+#login p {
+	width:900px;
+	float:left;
+	padding-left:20px;
+}
+#login .p1 {
+	float:left;
+}
+#login .p2 {
+	float:right;
+}
+#login img {
+	margin-right:3px;
+}
+#logo {
+	float:left;
+	height:55px;
+	width:500px;
+	padding-left:30px;
+	margin-top:
+ 10px;
+}
+#logo img {
+	vertical-align:middle;
+	padding-left:20px;
+}
+#logo h1 {
+	color:#8ec657;
+	font-size:24px;
+	font-family:"黑体";
+}
+#nav {
+	width:1000px;
+	background-color:#fc6a15;
+	height:30px;
+}
+#nav ul {height:30px; margin-left:50px;
+	padding-left:30px;
+	list-style:none;
+}
+#nav ul li {
+	float:left;
+}
+#nav li a {
+	color:#FFF;
+	width:80px;
+	display:block;
+	text-decoration:none;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:12px;
+}
+#nav li a:hover {
+	background-color:#F00;
+}
+#content{  width:998px; clear:both; border:1px solid #fc6a15; }
+ #content p{ line-height:2em; text-indent:2em; margin:20px; font-size:13px;}
+  #content h3{ text-align:center; margin-top:20px; color:#060;}
+#footer {
+	clear:both;
+	width:1000px;
+	text-align:center;
+	margin-top:20px;
+	height:40px;
+	padding-top:5px;
+	background-color:#fc6a15;
+}

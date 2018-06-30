@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	margin:0 auto;
+
+	font:12px/1.6 "宋体"; background-color:#aade76;
+}
+#logo { width:450px; height:280px; background-color:#FFF; margin:0 auto; margin-top:150px; }
+#logo img {
+	vertical-align:middle;
+	padding-left:20px;
+	padding-top:-10px;
+}
+#logo h1 { padding-top:30px;
+	color:#8ec657;
+	font-size:15px;
+	font-family:"黑体";
+}
+form{ margin-left:70px;}  
+p{ margin:20px;}

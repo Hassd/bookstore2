@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查看商品</title>
+<link href="__PUBLIC__/Admin/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <include file="Public/nav-left"/>
+</div>
+<div id="right" >
+  <p style="background:#628e37; padding-left:10px; color:#FFF;">您当前的位置：商品管理－＞查看商品</p>
+ 
+  <form action="__URL__/BookDelAll" method="post" >
+    <span style="text-align:right; padding-right:10px;">
+    
+    </span>
+    <table width="670" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td  bgcolor="#666666"><table width="670" cellspacing="1" border="0px">
+            <tr>
+              <td width="33"  bgcolor="#FFFFFF"><div>复选</div></td>
+              <td width="99"  bgcolor="#FFFFFF"><div>图书名称</div></td>
+              <td width="61"  bgcolor="#FFFFFF"><div>作者</div></td>
+              <td width="115"  bgcolor="#FFFFFF"><div>出版社</div></td>
+              <td width="59"  bgcolor="#FFFFFF"><div>出版时间</div></td>
+              <td width="77"  bgcolor="#FFFFFF"><div>价格</div></td>
+              <td width="77"  bgcolor="#FFFFFF"><div>图书推荐</div></td>
+              <td width="126"  bgcolor="#FFFFFF"><div>操作</div></td>
+            </tr>
+            <volist name="list" id="book">
+              <tr>
+                <td  bgcolor="#FFFFFF" style="text-align:center;"><input type="checkbox" name="{$book.bookid}" value="1" /></td>
+                <td  bgcolor="#FFFFFF" style="text-align:center;">{$book.bookname}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">{$book.author}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">{$book.pubhouse}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">{$book.pubdate}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">{$book.bookprice}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">{$book.recommend}</td>
+                <td bgcolor="#FFFFFF" style="text-align:center;">
+                  <a href="__URL__/BookSaveShow/bookid/{$book.bookid}">修改</a>&nbsp;
+                  <a href="__URL__/BookDel/bookid/{$book.bookid}">删除</a>
+                </td>
+              </tr>
+            </volist>
+          </table></td>
+      </tr>
+     <td><table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td  style="text-align:right; padding-right:10px;"> 
+	    <input type="submit" value="删除选择项" class="buttoncss" style="margin-right:255px;" >
+     </td>   
+     <td  style="text-align:right; padding-right:10px;"> 
+       {$page}
+		 </td>
+  </tr>
+</table></td>
+    </table>
+   
+ 
+  <p style=" text-align:right; margin-right:5px;">  
+
+</p>
+  </form></div>
+  <div id="footer">
+  <p>地址：北京市朝阳区***路***号 版权所有：北京天天书屋有限公司</p>
+  <p>互联网信息服务备案编号：京ICP备06001111号  技术支持：计算机信息工程系</p>
+</div></body>
+
+</html>

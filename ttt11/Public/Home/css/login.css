@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	margin:0 auto;
+
+	font:12px/1.6 "宋体"; background-color:#FC6;
+}
+a{ color:#000; text-decoration:none;}
+a img{ border:0px;}
+#logo { width:450px; height:300px; background-color:#FFF; margin:0 auto; margin-top:150px; }
+#logo img {
+	vertical-align:middle;
+	padding-left:40px;
+	padding-top:-10px;
+}
+#logo h1 { padding-top:30px;
+	color:#8ec657;
+	font-size:15px;
+	font-family:"黑体";
+}
+#logo #h{ margin: -50px 0px 0px 190px;}
+form{ margin-left:70px;}  
+p{ margin:20px;}

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片商城首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/changxiao.css" />
+</head>
+<body>
+  <div id="header">
+    <include file="Public/title"/>
+  </div>
+
+  <div id="nav" >
+    <include file="Public/nav"/>
+  </div>
+
+  <div id="content">
+
+    <div id="left">
+      <div id="subnav">
+        <include file="Public/nav-left"/>
+      </div>
+      <div id="bottom">
+        <include file="Public/gonggao"/>
+      </div>
+    </div>
+
+    <div id="right">
+      <h3 style="font-size: 30px;">{$list.bookname}</h3>
+      <div id="rleft"><img src="__ROOT__/Uploads/{$list.photo}" style="width: 250px" />
+      <div id="rright">
+        <p class="p2">原价：<span>{$list.bookprice}</span></p>
+        <p class="p3">现价：{$list.bookprice} </p>
+        <p class="p4">作 者：<span>{$list.author}</span>著</p>
+        <p class="p5">出版社：<span>{$list.pubhouse}</span></p>
+        <p>出版时间：{$list.pubdate}</p>
+        
+        <form id="form1" name="form1" method="post" action="__APP__/Home/gouwuche/gouwuche/bookid/{$list.bookid}">
+          <p>购买数量：<input name="num" type="text"  width="50"/>件</p>
+          <label> 
+            <input type="submit" value="" style="background-image: url(__PUBLIC__/Home/images/images.jpg);width: 180px;height: 40px;">
+          </label>
+        </form>
+      </div>
+      <div id="rfooter">
+        <ul>
+        
+          <li><a>内容简介</a></li>
+          
+        </ul>
+        <p>{$list.introduction}</p>
+      
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>互联网信息服务备案编号：冀ICP备06001111号 技术支持：计算机系</p>
+    <p>Copyright @2012-2019,All Rights Reserved  京ICP证041189号</p>
+  </div>
+
+</body>
+</html>

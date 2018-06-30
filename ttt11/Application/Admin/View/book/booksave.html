@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>填加商品</title>
+<link href="__PUBLIC__/Admin/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="javascript">
+function sjyz(fom){
+	if(fom.name.value==''){
+		alert("请输入图书名称");
+		fom.name.select();
+		return false;
+		}
+	if(fom.sh.value==''){
+		alert("请输入书号");
+		fom.sh.select();
+		return false;
+		}
+	if(fom.zz.value==''){
+		alert("请输入作者");
+		fom.zz.select();
+		return false;
+		}
+	if(fom.cbs.value==''){
+		alert("请输入出版社");
+		fom.cbs.select();
+		return false;
+		}
+	if(fom.jg.value==''){
+		alert("请输入图书价格");
+		fom.jg.select();
+		return false;
+		}
+	if(fom.zk.value==''){
+		alert("请输入折扣");
+		fom.zk.select();
+		return false;
+		}
+
+	if(fom.jj.value==''){
+		alert("请输入简介");
+		fom.jj.select();
+		return false;
+		}
+	}
+	
+</script>
+<body>
+<div id="header">
+  <include file="Public/nav-left"/>
+</div>
+<div id="right" >
+  <p style="background:#628e37; padding-left:10px; color:#FFF;">您当前的位置：商品管理－＞填加商品</p>
+  <form action="__URL__/BookSave/bookid/{$list.bookid}" method="post" onsubmit="return sjyz(this)" enctype="multipart/form-data">
+    <table width="670" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td  bgcolor="#666666"><table width="670" cellspacing="1">
+            <tr>
+              <td  bgcolor="#FFFFFF"><div>图书名称:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="bookname" value="{$list.bookname}" type="text" id="name" /></td>
+            </tr>
+            <tr>
+              <td  bgcolor="#FFFFFF"><div>书号:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="isbn" value="{$list.isbn}" type="text" id="sh" /></td>
+            </tr>
+            <tr>
+              <td  bgcolor="#FFFFFF"><div>图书类型:</div></td>
+              <td  bgcolor="#FFFFFF">
+
+                <select id="lx" name="typeid" style="margin-left:10px;">
+                	<volist name="typelist" id="type">
+                       	<eq name="type.typeid" value="$list.typeid">
+                    		<option value="{$type.typeid}" selected="selected">{$type.typename}</option>
+                        <else/>
+                       		<option value="{$type.typeid}">{$type.typename}</option>
+                        </eq>
+                    </volist>
+                 </select>
+              </td>
+            </tr>
+            <tr>
+              <td  bgcolor="#FFFFFF"><div>作者:</div></td>
+              <td  bgcolor="#FFFFFF"><input value="{$list.author}" name="author" type="text" id="zz" /></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>出版社:</div></td>
+              <td><input name="pubhouse" value="{$list.pubhouse}" type="text" id="cbs" /></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>出版时间:</div></td>
+              <td>
+                <select id="nian" name="nian" style="margin-left:10px;"></select>年
+                <select id="yue" name="yue"></select>月
+                <select id="ri" name="ri"></select>日
+              </td>
+              <script>
+                  var nn=document.getElementById('nian');
+                  var yy=document.getElementById('yue');
+                  var rr=document.getElementById('ri');
+
+                  var time="{$list.pubdate}";
+                  var arr=time.split("-");
+                  var uu="";
+                  var jj="";
+                  var mm="";
+                  for(var i=1980;i<2019;i++){
+                    if(i==arr[0]){
+                      uu=uu +"<option selected>"+i+"</option>";
+                    }else{
+                      uu=uu +"<option>"+i+"</option>";
+                    }
+                  }
+                  for(var i=1;i<13;i++){
+                    if(i==arr[1]){
+                      jj=jj +"<option selected>"+i+"</option>";
+                    }else{
+                      jj=jj +"<option>"+i+"</option>";
+                    }
+                  }
+                  for(var i=1;i<32;i++){
+                    if(i==arr[2]){
+                      mm=mm +"<option selected>"+i+"</option>";
+                    }else{
+                      mm=mm +"<option>"+i+"</option>";
+                    }
+                  }
+                  nn.innerHTML=uu;
+                  yy.innerHTML=jj;
+                  rr.innerHTML=mm;
+                </script>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>图书价格:</div></td>
+              <td><input name="bookprice" value="{$list.bookprice}" type="text" id="jg" />
+                <font color="#FF0000">元</font></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>折扣:</div></td>
+              <td><input name="vipprice" value="{$list.vipprice}" type="text" id="zk" />
+                <font style="color:#F00">例:如是7.5就是打7.5折</font></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>图书图片:</div></td>
+              <td><img src="__ROOT__/Uploads/{$list.photo}" width="50px" height="50px"><input name="photo" type="file" id="tp" /></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>图书简介:</div></td>
+              <td><textarea name="introduction" cols="30" rows="5" style="margin-left:10px;" >{$list.introduction}</textarea></td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>是否推荐:</div></td>
+              <td>
+              	<eq name="list.recommend" value="1">
+                	<input name="recommend" checked="checked" type="radio" value="1" />是
+                	<input name="recommend" type="radio" value="0" />否
+                <else/>
+                	<input name="recommend" type="radio" value="1" />是
+                	<input name="recommend" checked="checked" type="radio" value="0" />否
+                </eq>
+              </td>
+            </tr>
+            <tr  bgcolor="#FFFFFF">
+              <td><div>图书预售:</div></td>
+              <td>
+              	<eq name="list.newbook" value="1">
+                	<input name="newbook" checked="checked" type="radio" value="1"/>是
+               		<input name="newbook" type="radio" value="0" />否
+                <else/>
+                    <input name="newbook" type="radio" value="1"/>是
+                    <input name="newbook" checked="checked" type="radio" value="0" />否
+                </eq>
+              </td>
+            </tr>
+            <tr style="text-align:center;">
+              <td colspan="2" bgcolor="#FFFFFF">
+                <input type="submit" name="ok"  value="提&nbsp;交" style=" margin-right:10px;"/>
+                <input type="reset"  value="重&nbsp;置"/></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div id="footer">
+ <p>地址：北京市朝阳区***路***号 版权所有：北京天天书屋有限公司</p>
+  <p>互联网信息服务备案编号：京ICP备06001111号  技术支持：计算机信息工程系</p>
+</div>
+</body>
+
+</html>

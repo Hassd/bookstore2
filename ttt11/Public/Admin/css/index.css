@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	margin:0 auto;
+	width:1024px;
+	font:12px/1.6 "宋体";
+}
+ul li{ padding-bottom:4px;
+padding-top:5px;}
+
+input{ margin-left:10px;}
+#header { margin:30px 0px 10px 120px;}
+#header img {
+	vertical-align:middle;
+	
+	padding-top:-10px;
+}
+#header h1 {
+	color:#8ec657;
+	font-size:24px;
+	font-family:"黑体";
+}
+#left{ background-color:#8ec657 ; width:200px; float:left; margin-left:120px; margin-top:10px; padding-bottom:35px;
+margin-bottom:10px;}
+#left h3{ background-color:#628e37; text-align:center ; color:#FFF;}
+#left img{ margin:0px 5px 0px 5px;}
+#left ul{ list-style:none; padding-bottom:15px;}
+#left ul li{ background:url(images/houtai3.gif) bottom no-repeat; width:150px; margin:5px 10px 0px 30px;}
+#left ul li a{ text-decoration:none; color:#000;}
+#right { float:right; border: 1px solid #999; width:670px; margin:10px; }
+#right table { margin-top:10px; color:#006699; margin:0 auto;
+}
+#right table tr td table{ margin:0 auto;}
+#right table tr td table tr div{ text-align:center;}
+#right table tr td table tr td{ padding-top:5px;text-align:left;
+padding-bottom:5px;}
+#footer {
+	clear:both;
+	width:900px;
+	text-align:center;
+	margin-top:20px;
+	height:40px;
+	padding-top:8px;
+	background-color:#628e37;
+	margin-left:120px;
+}

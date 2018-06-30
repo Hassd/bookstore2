@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片商城首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/gouwuche.css" />
+</head>
+<body>
+<div id="header">
+  <include file="Public/title"/>
+</div>
+<div id="nav" >
+  <include file="Public/nav"/>
+</div>
+<script language="javascript"> 
+        function resizeImage(obj){if(obj.height>50)obj.height=50;if(obj.width>50)obj.width=50; } 
+        </script>
+<div id="content"> <img src="__PUBLIC__/Home/images/gouwuche.jpg"/>
+  <form action="__URL__/gouwuchegai" method="post" onsubmit="return slyz()">
+    <table width="1000" border="1" bordercolor="#006600" bgcolor="#FFFFFF"  cellspacing="0" >
+      <tr >
+        <th width="214" >商品名称</th>
+        <th width="252">商品价格</th>
+        <th width="261">商品数量</th>
+        <th width="255">操作</th>
+      </tr>
+      </script>
+      <volist name="Think.session.uit" id="gouwuche">
+
+        <tr>
+          <td style="border-top:1px #F60 solid;"><p><img src="__PUBLIC__/admin/{$gouwuche.photo}" width="44" height="59" onload="resizeImage(this)"/><a>{$gouwuche.bookname}</a></p></td>
+          <td style="border-top:1px #F60 solid;">￥{$gouwuche.bookprice}</td>
+          <td style="border-top:1px #F60 solid;"><input type="text" name="{$gouwuche.bookid}" id="textfield" value="{$gouwuche.booknum}" onblur="slyz()"/></td>
+          <td style="border-top:1px #F60 solid; border-right:0px"><a href="__URL__/GouwucheDel/id/{$gouwuche.bookid}">取消商品</a></td>
+        </tr>
+      </volist>
+    </table>
+    <div id="ft">
+      <p><span class="p1">
+        <input type="submit" value="修改商品数量" />
+        &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p1"><a href="__URL__/GouwucheDelAdd">清空购物车</a> </span> <span class="p2" > 商品金额总计：￥{$zzz} </span></p>
+      </div>
+    <a href="__APP__/Home/dingdan/dingdan" class="i1"><img src="__PUBLIC__/Home/images/jiesuan.jpg" style=" border:0px; width:150px; height:50px;"/></a>
+    <a href="__APP__/Home/index/index"> <img src="__PUBLIC__/Home/images/gouwu.jpg" class="i1"/> </a>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	background-color:#ffffff;
+	margin:0 auto;
+	width:1000px;
+	font:12px/1.6 "宋体";
+}
+
+#header { 	width:1000px;
+	margin-top:10px;
+	height:100px;
+}
+#login {
+	background:url(../images/loginbg.gif) repeat-x;
+	width:1000px;
+	height:30px;
+}
+#login ul li {
+	
+	list-style:none;
+	line-height:50px;
+	clear:both;
+}
+#login p{ width:900px; float:left; padding-left:20px; }
+#login .p1 { float:left; 
+		}
+#login .p2 { float:right; 	
+		}		
+#login img{ margin-right:3px;}
+#logo { float:left;	height:55px;
+	width:500px;
+	padding-left:30px; margin-top:
+	10px;}
+#logo img {
+	vertical-align:middle;
+	padding-left:20px;
+	}
+#logo h1 {
+	color:#8ec657;
+	font-size:24px;
+	font-family:"黑体";
+}
+
+
+#nav {
+	width:1000px;
+	background-color:#fc6a15;
+	height:30px;
+}
+#nav ul {
+	padding-left:30px;
+	list-style:none;
+}
+#nav ul li {
+	float:left;
+}
+#nav li a {
+	color:#FFF;
+	width:80px;
+	display:block;
+	text-decoration:none;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:12px;
+}
+#nav li a:hover {
+	background-color:#F00;
+}
+#subnav  a{color:#f8670e; text-decoration:none;}
+#content #subnav {
+	width:185px;
+	border:1px solid #8ec657;
+	margin-top:10px;
+	margin-left:10px;
+	float:left;
+}
+#content #subnav  h3 img{  vertical-align:bottom; padding-right:3px;
+	
+}
+#content #subnav h3 { height:20px ; line-height:20px; padding:5px 5px 5px 8px;background-color:#8ec657; 
+	color:#FFF;
+}
+#content #subnav h4 {  
+	color:#f8670e;
+	padding:14px 3px 6px 60px;
+	font-size:13px; border-bottom: dashed #C60 1px;
+}
+#content #subnav h4 img{ vertical-align:middle ; margin-right:2px;}
+#left{ float:left; width:185px}
+#bottom {
+	float:left;
+	width:185px;
+
+	margin:10px 0px 0px 10px;
+	border: 1px solid #690;
+	color:#4a4a4a;
+}
+#bottom a{ color:#666; text-decoration:none;} 
+#bottom  h3{ height:20px ; line-height:20px; padding:5px 5px 5px 8px;background-color:#8ec657; 
+	color:#FFF;}
+#bottom	  h3 img{vertical-align:bottom; padding-right:3px;}
+	
+  #bottom ul {
+	float:left;
+	margin-top:4px;
+	list-style:none;
+ 
+}
+ #bottom ul li {
+	color:#4f8716;
+	font-weight:bold;
+	font-family:"宋体";
+	font-size:12px;
+ 
+	float:left;
+	width:185px;
+	height:30px; padding-left:7px;
+}
+ 
+#content #con { margin-top:10px ; margin-right:10px;
+	width:770px;
+	float:right;
+}
+
+#content #left {
+	float:left;
+	width:507px;
+	height:120px;
+	margin:90px 0px 0px 0px;
+	border: 1px solid #666;
+	color:#4a4a4a;
+}
+#content #left ul {
+	float:right;
+	margin-top:-70px;
+	list-style:none;
+	margin-right:40px;
+}
+#content #left h4 {
+	color:#4f8716;
+	font-weight:bold;
+	font-family:"宋体";
+	font-size:14px;
+	margin:5px;
+	float:left;
+	width:507px;
+	height:30px;
+}
+#content #left h4 img{
+
+	margin:4px 0px ;}
+#content #left h4 span.b{
+	color:#F60; font-size:10px; float:right; margin-right:10px;
+	
+	}
+#content #left h4 span.a{
+	color:#4f8716;
+	float:left;
+	}
+#content #left h5 {
+	color:#4f8716;
+	font-size:12px;
+	padding-top:13px;
+}
+#content #left img {
+	margin:10px;
+	float:left;
+}
+#content #left ul img{ clear:both; margin-top:6px;}
+#content #left p span {
+	color:#ed4e00
+}
+#content #right {
+	float:right;
+	width:220px;
+	height:445px;
+	border:1px solid #8ec657;
+		color:#4a4a4a; margin-top:10px;  
+}
+#content #right h4{ height:20px ; line-height:20px; margin:5px 5px 5px 8px; }
+#content #right span{
+	margin-bottom:10px;}
+#content #right h4 img{	vertical-align:bottom;}
+#content #right p{ margin:15px;}
+#content #right #rp{ margin-top:20px;   padding-top:10px;}
+#content #right p img{vertical-align:bottom; margin-right:15px;}
+#content #confooter {
+	float:left;
+	width:750px;
+	height:310px;
+	border: 1px solid #666;
+	margin-top:10px;
+	color:#4a4a4a;
+}
+#content #confooter h5 {
+color:#4f8716;
+font-size:12px;
+padding-top:3px;
+ 
+}
+#content #confooter h3 { float:left;width:750px;	background:url(images/conbg.gif) no-repeat;
+	height:35px;
+	line-height:35px;
+	color:#F60;
+}
+#content #confooter h3 span.hl{ font-size:12px; text-align:left; float:left;color:#4f8716;}
+#content #confooter h3 span.hr{ color:#4a4a4a; font-size:10px; float:rightcolor:#F60; float:right;}
+#content #confooter img { margin:5px 15px 5px 10px;;
+	float:left;
+}
+#content #confooter #conimg{margin:5px 0px 0px 10px;}
+#content #confooter p span {
+	color:#ed4e00
+}
+#content #confooter ul {
+	list-style:none;
+}
+#content #confooter ul li {
+	float:left;
+	width:200px;
+	padding:5px 10px 10px 20px;
+}
+#footer{ clear:both; width:950px; text-align:center; padding-top:50px;}

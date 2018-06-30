@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查看公告</title>
+<link href="__PUBLIC__/Admin/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="header">
+  <include file="Public/nav-left"/>
+</div>
+
+<div id="right" >
+  <p style="background:#628e37; padding-left:10px; color:#FFF;">您当前的位置：公告管理－＞查看公告</p>
+  <form name="form1" method="post" action="__URL__/GonggaoDelAll">
+  <table width="670" border="0" align="center" cellpadding="0" cellspacing="0">
+ 
+  <tr>
+    <td height="50" bgcolor="#666666">
+      <table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="1">
+        <tr>
+          <td width="50" height="25" bgcolor="#FFFFFF">复选</td>
+          <td width="448" bgcolor="#FFFFFF">公告主题</td>
+          <td width="248" bgcolor="#FFFFFF">操作</td>
+        </tr>
+        <volist name="list" id="gonggao">
+          <tr>
+            <td height="25" bgcolor="#FFFFFF"><input type="checkbox" name="{$gonggao.id}" value="1"></td>
+            <td height="25" bgcolor="#FFFFFF" style=" text-align:center;">{$gonggao.title}</td>
+            <td height="25" bgcolor="#FFFFFF">
+              <a href="__URL__/GonggaoSaveShow/id/{$gonggao.id}">查看</a>&nbsp;&nbsp;
+              <a href="__URL__/GonggaoDel/id/{$gonggao.id}">删除</a>
+            </td>
+          </tr>
+        </volist>
+      </table>
+    </td>
+  </tr>
+  <td><table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+
+    <td  style="text-align:right; padding-right:10px;"> 
+	<input type="submit" value="删除选择项" class="buttoncss" style="margin-right:255px;" >
+	  
+      
+		 </td>   <td  style="text-align:right; padding-right:10px;"> 
+        {$page}
+		 </td>
+  </tr>
+</table></td>
+</table>
+
+</form>
+</div>
+<div id="footer">
+  <p>地址：北京市朝阳区***路***号 版权所有：北京天天书屋有限公司</p>
+  <p>互联网信息服务备案编号：京ICP备06001111号  技术支持：计算机信息工程系</p>
+</div>
+</body>
+</html>

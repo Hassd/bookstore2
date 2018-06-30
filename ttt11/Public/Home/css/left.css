@@ -1,0 +1,67 @@
+@charset "gb2312";
+/* CSS Document */
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+	background-color:#ffffff;
+	margin:0 auto;
+	width:1000px;
+	font:12px/1.6 "宋体";
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+a img {
+	border:0px;
+}
+
+#left {
+	float:left;
+	width:185px
+}
+#subnav a {
+	color:#f8670e;
+	text-decoration:none;
+}
+#content #subnav {
+	width:185px;
+	border:1px solid #8ec657;
+	margin-top:10px;
+	margin-left:10px;
+	float:left;
+}
+#content #subnav h3 img {
+	vertical-align:bottom;
+	margin-top:-2px;
+	padding-right:7px;
+}
+#content #subnav h3 {
+	height:20px;
+	font-size:12px;
+	line-height:20px;
+	padding:10px 5px 5px 8px;
+	background-color:#8ec657;
+	color:#FFF;
+}
+#content #subnav h4 {
+	color:#f8670e;
+	padding:14px 3px 6px 60px;
+	font-size:13px;
+	border-bottom: dashed #C60 1px;
+}
+#content #subnav h4 img {
+	vertical-align:middle;
+	margin-right:2px;
+}
+
+
+
+	
+	
+	
+	
+
+
